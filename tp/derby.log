@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat May 23 22:09:54 CEST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0172-4327-ffb2-000007804070 
+on database directory C:\Users\lylia\Desktop\koukou\5.2\koukou_5.2\bdd with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/lylia/Desktop/koukou/5.2/koukou_5.2/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\lylia\Desktop\koukou\5.2\koukou_5.2
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
