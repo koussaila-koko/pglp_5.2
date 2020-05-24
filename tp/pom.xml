@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>uvsq</groupId>
+  <artifactId>koukou_5.2</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>koukou_5.2</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+  <dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.18</version>
+</dependency> 
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    <groupId>com.github.spotbugs</groupId>
+    <artifactId>spotbugs</artifactId>
+    <version>4.0.0</version>
+    <type>pom</type>
+</dependency>
+    
+    
+  </dependencies>
+
+ <build>
+ 
+ 		 <plugins>	
+  			<plugin><groupId>org.apache.maven.plugins</groupId>	
+  			<artifactId>maven-site-plugin</artifactId>
+  			<version>3.7.1</version>
+  		</plugin>
+  		 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+                <configLocation>checkstyle.xml</configLocation>
+            </configuration>
+        </plugin>
+  
+      <plugin>
+        <groupId> org.apache.maven.plugins </groupId>
+        <artifactId> maven-javadoc-plugin </artifactId>
+        <version> 3.2.0 </version>
+        <configuration>
+          <show> privé </show>
+          <nohelp> true </nohelp>
+        </configuration>
+      </plugin>
+  </plugins>
+  </build>
+  
+  <reporting> 
+  	<plugins>
+  		<plugin>
+  			<groupId> org.apache.maven.plugins</groupId>
+  			<artifactId>maven-checkstyle-plugin</artifactId>
+            <version>3.0.0</version>
+  		</plugin>
+	      <plugin>
+	        <groupId>org.codehaus.mojo</groupId>
+	        <artifactId>findbugs-maven-plugin</artifactId>
+	        <version>3.0.4</version>
+	      </plugin>
+
+	 <plugin>
+        <groupId> org.apache.maven.plugins </groupId>
+        <artifactId> maven-javadoc-plugin </artifactId>
+        <version> 3.2.0 </version>
+        <configuration>
+          <stylesheetfile> $ {basedir} /src/main/javadoc/stylesheet.css </stylesheetfile>
+          <show> public </show>
+        </configuration>
+      </plugin>
+      	<plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-javadoc-plugin</artifactId>
+	        <version>3.0.1</version>
+      	</plugin>
+	
+  	</plugins>
+  </reporting>
+</project>
