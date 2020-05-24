@@ -186,12 +186,15 @@ public class GroupeJdbc implements DAOJDBC<Groupe> {
 	}
 
 	/**
-	 * update le groupe prend un groupe retourne null car on pourais pas modifier un
-	 * groupe sauf si on est admin de groupe
+	 * update le groupe prend un groupe.
+	 * donc on suprimme un groupe et on cree un autre groupe
+	 * avec les meme informations mais on change les informations
+	 * que on veux modifier
+	 * @param obj le personnel a supprimer.
 	 */
 	public Groupe update(Groupe obj) {
-  this.delete(obj);
- return this.create(obj);
+		this.delete(obj);
+		return this.create(obj);
 	}
 
 	/**
